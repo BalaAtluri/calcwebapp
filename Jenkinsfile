@@ -3,7 +3,7 @@ node{
         git 'https://github.com/MMuniraja/calcwebapp.git'
     }
     stage('Compile Package'){
-        def mvnHome = tool name: 'Maven', type: 'Maven'
+        def mvnHome = tool name: 'Maven', type: 'maven'
         sh "${mvnHome}/bin/mvn package"
     }
     stage('Deploy to Tomcat'){ 
